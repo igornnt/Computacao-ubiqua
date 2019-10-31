@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Tela1View.dart';
+
 class LoginView extends StatelessWidget {
 
   TextEditingController _textEmailngController = TextEditingController();
@@ -95,6 +97,10 @@ class LoginView extends StatelessWidget {
                   ),
                   ),
                   onPressed: (){
+                  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => TelaPetPerdidosRegiao()),
+  );
                   },
                 ),
               ),
