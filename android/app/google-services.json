@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "901343858349",
+    "firebase_url": "https://projetodevmoveis.firebaseio.com",
+    "project_id": "projetodevmoveis",
+    "storage_bucket": "projetodevmoveis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901343858349:android:b23f45d3fb38843b350024",
+        "android_client_info": {
+          "package_name": "com.example.dogpampas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901343858349-rp1qbr3e3fghilppudbvg0leie2s2vtq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpzy4atwAJFafyKlE91AIyHJegI2Y_1sA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901343858349-rp1qbr3e3fghilppudbvg0leie2s2vtq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
