@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'Details.dart';
 
 class TelaPetPerdidosRegiao extends StatefulWidget {
   TelaPetPerdidosRegiao({Key key, this.title}) : super(key: key);
@@ -88,7 +88,12 @@ class _Tela1State extends State<TelaPetPerdidosRegiao> {
                                                     fontSize: 15.0,
                                                   ),
                                                   ),
-                                                  onPressed: () {},
+                                                  onPressed: () {
+                                                    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => TelaDetails()),
+  );
+                                                  },
                                                   textColor: Color.fromRGBO(51, 102, 187, 1.0),
                                                 ),
                                               )
