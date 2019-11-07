@@ -14,7 +14,6 @@ class _Tela1State extends State<TelaPetPerdidosRegiao> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Pets perdidos em sua região'),
