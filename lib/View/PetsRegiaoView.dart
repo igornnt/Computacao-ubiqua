@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'Details.dart';
+import 'DetalhesView.dart';
 
-class TelaPetPerdidosRegiao extends StatefulWidget {
-  TelaPetPerdidosRegiao({Key key, this.title}) : super(key: key);
+class TelaPetsPerdidosRegiao extends StatefulWidget {
+  TelaPetsPerdidosRegiao({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _Tela1State createState() => _Tela1State();
+  _TelaPetsPerdidosState createState() => _TelaPetsPerdidosState();
 }
 
-class _Tela1State extends State<TelaPetPerdidosRegiao> {
+class _TelaPetsPerdidosState extends State<TelaPetsPerdidosRegiao> {
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,10 @@ class _Tela1State extends State<TelaPetPerdidosRegiao> {
                                                     fontSize: 15.0,
                                                   ),
                                                   ),
-                                                  onPressed: () {},
+                                                  onPressed: () {Navigator.push(
+                                                      context, MaterialPageRoute(builder: (context) => TelaDetails()),
+                                                    );
+                                                    },
                                                   textColor: Color.fromRGBO(51, 102, 187, 1.0),
                                                 ),
                                               )
@@ -89,9 +92,9 @@ class _Tela1State extends State<TelaPetPerdidosRegiao> {
                                                   ),
                                                   onPressed: () {
                                                     Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => TelaDetails()),
-  );
+                                                      context,
+                                                     MaterialPageRoute(builder: (context) => TelaDetails()),
+                                                   );
                                                   },
                                                   textColor: Color.fromRGBO(51, 102, 187, 1.0),
                                                 ),

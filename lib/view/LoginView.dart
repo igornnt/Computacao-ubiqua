@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'Tela1View.dart';
+import 'PetsRegiaoView.dart';
 
 class LoginView extends StatelessWidget {
 
@@ -99,7 +98,7 @@ class LoginView extends StatelessWidget {
                   onPressed: (){
                   Navigator.push(
     context,
-    MaterialPageRoute(builder: (context) => TelaPetPerdidosRegiao()),
+    MaterialPageRoute(builder: (context) => TelaPetsPerdidosRegiao()),
   );
                   },
                 ),
