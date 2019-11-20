@@ -20,105 +20,42 @@ class _TelaDetailsState extends State<TelaDetails> {
                     child: Image.asset('imagens/dog1.jpeg', fit: BoxFit.fill,)
               ),
 
-       Container(
-        child:
-          new Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          new Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 1.0, 0, 3),
-                child: new Text(
-                "Raça:",
-                  style: new TextStyle(fontSize:22.0,
-                  color: const Color(0xFF000000),
-                  fontWeight: FontWeight.w500,
-                  fontFamily: "Roboto")
-                ),
-              ),
+       Padding(
+         padding: const EdgeInsets.only(left: 15, top: 15, bottom: 15),
+         child: Row(children: <Widget>[
+      Text("Raça: ", style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold)),
+      Text("Sim", style: TextStyle(fontSize: 16.0))
+    ]
+    ),
+       ),
 
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 1.0, 0, 3),
-                child: new Text(
-                "Nome da raça:",
-                  style: new TextStyle(fontSize:22.0,
-                  color: const Color(0xFF000000),
-                  fontWeight: FontWeight.w500,
-                  fontFamily: "Roboto")
-                ),
-              ),
+        Padding(
+         padding: const EdgeInsets.only(left: 15, top: 5, bottom: 15),
+         child: Row(children: <Widget>[
+      Text("Nome da raça: ", style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold)),
+      Text("Não sei", style: TextStyle(fontSize: 16.0))
+    ]
+    ),
+       ),
 
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 1.0, 0, 3),
-                child: new Text(
-                "Localização:",
-                  style: new TextStyle(fontSize:22.0,
-                  color: const Color(0xFF000000),
-                  fontWeight: FontWeight.w500,
-                  fontFamily: "Roboto")
-                ),
-              )
-            ]
+ Padding(
+         padding: const EdgeInsets.only(left: 15, top: 5, bottom: 15),
+         child: Row(children: <Widget>[
+      Text("Porte: ", style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold)),
+      Text("Médio", style: TextStyle(fontSize: 16.0))
+    ]
+    ),
+       ),
 
-          ),
+ Padding(
+         padding: const EdgeInsets.only(left: 15, top: 5, bottom: 15),
+         child: Row(children: <Widget>[
+      Text("Local: ", style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold)),
+      Text("Arredores de Rua Sei lá", style: TextStyle(fontSize: 16.0))
+    ]
+    ),
+       ),
 
-          new Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              new Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 1.0, 0, 3),
-                    child: new Text(
-                    "Sim",
-                      style: new TextStyle(fontSize:22.0,
-                      color: const Color(0xFF000000),
-                      fontWeight: FontWeight.w300,
-                      fontFamily: "Roboto")
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 1.0, 0, 3),
-                    child: new Text(
-                    "Sei lá",
-                      style: new TextStyle(fontSize:22.0,
-                      color: const Color(0xFF000000),
-                      fontWeight: FontWeight.w300,
-                      fontFamily: "Roboto")
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 1.0, 0, 3),
-                    child: new Text(
-                    "Arredores de rua Não Sei",
-                      style: new TextStyle(fontSize:22.0,
-                      color: const Color(0xFF000000),
-                      fontWeight: FontWeight.w300,
-                      fontFamily: "Roboto")
-                    ),
-                  )
-                ]
-              )
-            ]
-
-          )
-        ]
-
-         )
-         ),
          Padding(
            padding: const EdgeInsets.all(30.0),
            child: Container(
