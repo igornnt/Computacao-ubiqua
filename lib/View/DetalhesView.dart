@@ -75,9 +75,24 @@ class _TelaDetailsState extends State<TelaDetails> {
                     },
                   ),
            ),
-         )
+         ),
+
+      Padding(
+        padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+        child: FloatingActionButton.extended(
+            onPressed: () {},
+            label: Text('QUERO ADOTAR!'),
+            icon: Icon(Icons.sentiment_very_satisfied),
+            backgroundColor: Colors.deepOrange,
+          ),
+        ),
+
             ]
+
           )
+
       );
+
     }
+
 }
