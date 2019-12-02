@@ -1,4 +1,6 @@
 import 'package:dogpampas/View/LoginView.dart';
+import 'package:dogpampas/view/LoginView.dart' as prefix0;
+import 'package:dogpampas/view/mapa.dart';
 import 'package:flutter/material.dart';
 
 void main(){

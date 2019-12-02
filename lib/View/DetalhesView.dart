@@ -1,3 +1,4 @@
+import 'package:dogpampas/view/mapa.dart';
 import 'package:flutter/material.dart';
 
 class TelaDetails extends StatefulWidget {
@@ -71,6 +72,13 @@ class _TelaDetailsState extends State<TelaDetails> {
                     ),
                     ),
                     onPressed: (){
+
+                      Navigator.push(context,
+                          MaterialPageRoute(
+                            builder: (context) => Mapa(),
+                          )
+                      );
+
                     },
                   ),
            ),
