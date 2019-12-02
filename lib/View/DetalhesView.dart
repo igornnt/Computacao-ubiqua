@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Mapa.dart';
 
 class TelaDetails extends StatefulWidget {
   TelaDetails({Key key}) : super(key: key);
@@ -71,6 +72,10 @@ class _TelaDetailsState extends State<TelaDetails> {
                     ),
                     ),
                     onPressed: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Mapa()),
+                          );
                     },
                   ),
            ),
