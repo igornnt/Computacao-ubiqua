@@ -95,6 +95,42 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
                     }).toList()
                   ),
                 ),
+                  TextField(
+                  autofocus: true,
+                  style: new TextStyle(color: Colors.black, fontSize: 14),
+                  decoration: InputDecoration(
+                    labelText: "Bairro",
+                    labelStyle: TextStyle(color: Colors.black)  
+                  ),  
+                ),
+                TextField(
+                  autofocus: true,
+                  style: new TextStyle(color: Colors.black, fontSize: 14),
+                  decoration: InputDecoration(
+                    labelText: "Rua que foi visto pela última vez",
+                    labelStyle: TextStyle(color: Colors.black)  
+                  ),  
+                ),
+                Padding(
+              padding: const EdgeInsets.all(32),
+              child: Container(
+                height: 40,
+                width: MediaQuery.of(context).size.height,
+                child: RaisedButton(
+                  //Cor do botão
+                  color: Colors.deepOrange,
+                  //O Texto que vai nele
+                  child: Text("Informar Pet perdido", style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white
+                  ),
+                  ),
+                  onPressed: (){
+             
+                  },
+                ),
+              ),
+            ),
               
               ],
               
