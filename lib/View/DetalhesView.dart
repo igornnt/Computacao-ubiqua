@@ -1,5 +1,6 @@
 import 'package:dogpampas/view/mapa.dart';
 import 'package:flutter/material.dart';
+import 'Mapa.dart';
 
 class TelaDetails extends StatefulWidget {
   TelaDetails({Key key}) : super(key: key);
@@ -70,15 +71,29 @@ class _TelaDetailsState extends State<TelaDetails> {
                   "VER NO MAPA",
                   style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Mapa(),
-                      ));
-                },
-              ),
-            ),
+                    color: Colors.deepOrange,
+                    child: Text("VER NO MAPA", style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white
+                    ),
+                    ),
+                    onPressed: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Mapa()),
+                          );
+                    },
+                  ),
+           ),
+         ),
+
+      Padding(
+        padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+        child: FloatingActionButton.extended(
+            onPressed: () {},
+            label: Text('QUERO ADOTAR!'),
+            icon: Icon(Icons.sentiment_very_satisfied),
+            backgroundColor: Colors.deepOrange,
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),

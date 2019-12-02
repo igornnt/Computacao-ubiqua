@@ -1,3 +1,4 @@
+import 'package:dogpampas/View/RankingView.dart';
 import 'package:dogpampas/view/CadastroPetPerdido.dart';
 import 'package:flutter/material.dart';
 import 'DetalhesView.dart';
@@ -24,7 +25,10 @@ class _TelaPetsPerdidosState extends State<TelaPetsPerdidosRegiao> {
         color: Colors.white,
       ),
       onPressed: () {
-        // Ir para ranking
+        Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => TelaRanking()),
+  );
       },
     )
   ],
@@ -35,6 +39,11 @@ class _TelaPetsPerdidosState extends State<TelaPetsPerdidosRegiao> {
           child: Card(
             color: Colors.grey[200],
             child: InkWell(
+                            onTap: (){Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => TelaDetails()),
+  );
+  },
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
@@ -45,25 +54,6 @@ class _TelaPetsPerdidosState extends State<TelaPetsPerdidosRegiao> {
                         title: Text('Cachorro perdido e debilitado'),
                         subtitle: Text('500 mts de distância'),
                       ),
-                      Container(
-                        alignment: Alignment.bottomRight,
-                        child: FlatButton(
-                          child: const Text(
-                            'Ver mais',
-                            style: TextStyle(
-                              fontSize: 15.0,
-                            ),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => TelaDetails()),
-                            );
-                          },
-                          textColor: Color.fromRGBO(51, 102, 187, 1.0),
-                        ),
-                      )
                     ],
                   ),
                 ],
@@ -76,6 +66,11 @@ class _TelaPetsPerdidosState extends State<TelaPetsPerdidosRegiao> {
           child: Card(
             color: Colors.grey[200],
             child: InkWell(
+              onTap: (){Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => TelaDetails()),
+  );
+  },
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
@@ -86,25 +81,6 @@ class _TelaPetsPerdidosState extends State<TelaPetsPerdidosRegiao> {
                         title: Text('Dois cachorros perdidos :('),
                         subtitle: Text('1 km de distância'),
                       ),
-                      Container(
-                        alignment: Alignment.bottomRight,
-                        child: FlatButton(
-                          child: const Text(
-                            'Ver mais',
-                            style: TextStyle(
-                              fontSize: 15.0,
-                            ),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => TelaDetails()),
-                            );
-                          },
-                          textColor: Color.fromRGBO(51, 102, 187, 1.0),
-                        ),
-                      )
                     ],
                   ),
                 ],
