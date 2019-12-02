@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'DetalhesView.dart';
+import 'my_flutter_app_icons.dart';
 
 class TelaPetsPerdidosRegiao extends StatefulWidget {
   TelaPetsPerdidosRegiao({Key key, this.title}) : super(key: key);
@@ -17,6 +18,16 @@ class _TelaPetsPerdidosState extends State<TelaPetsPerdidosRegiao> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Pets perdidos em sua região'),
+        actions: <Widget>[
+    IconButton(
+      icon: Icon(MyFlutterApp.award,
+        color: Colors.white,
+      ),
+      onPressed: () {
+        // Ir para ranking
+      },
+    )
+  ],
       ),
         body: ListView(
           children: <Widget>[

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TelaDetails extends StatefulWidget {
   TelaDetails({Key key}) : super(key: key);
   @override
