@@ -2,6 +2,9 @@ import 'package:dogpampas/View/LoginView.dart';
 import 'package:flutter/material.dart';
 
 void main(){
+  print('passou aqui');
+
+
   runApp(
       MaterialApp(
         theme: new ThemeData(
