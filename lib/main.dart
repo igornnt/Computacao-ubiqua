@@ -22,14 +22,13 @@ void initState(){
     }
   );
 
-  firebaseMessaging.requesNotificationPermissions(
+  firebaseMessaging.requestNotificationPermissions(
     const IosNotificationSettings(
       sound: true,
       alert: true,
       badge: true,
     )
-  ),
- firebaseMessaging.
+  );
 }
 
 

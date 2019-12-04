@@ -180,7 +180,6 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
                   ),
                 ),
               ),
-            ),
              Form(
             key: _formKey,
             child: buildTextFormField(),

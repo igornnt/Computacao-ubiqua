@@ -3,6 +3,11 @@ import 'package:dogpampas/view/CadastroPetPerdido.dart';
 import 'package:flutter/material.dart';
 import 'DetalhesView.dart';
 import 'my_flutter_app_icons.dart';
+import '../service/pet_repository.dart';
+
+PetRepository pets = new PetRepository();
+
+
 
 class TelaPetsPerdidosRegiao extends StatefulWidget {
   TelaPetsPerdidosRegiao({Key key, this.title}) : super(key: key);
