@@ -134,7 +134,16 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
     MaterialPageRoute(
     builder: (context) =>
     TelaPetsPerdidosRegiao()),
-      }
+    );
+    }
+    ),
+    ),
+    ),
+    ]
+    ),
+    ),
+    ),
+        ),
     );
   }
 }
