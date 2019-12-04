@@ -1,7 +1,7 @@
 import 'package:dogpampas/view/mapa.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'mapa.dart';
+//import 'package:google_maps_flutter/google_maps_flutter.dart';
+//import 'mapa.dart';
 
 class TelaDetails extends StatefulWidget {
   TelaDetails({Key key}) : super(key: key);
