@@ -1,3 +1,4 @@
+import 'package:dogpampas/Model/Pet.dart';
 import 'package:flutter/material.dart';
 
 class CadastroPetPerdido extends StatefulWidget {
@@ -5,27 +6,18 @@ class CadastroPetPerdido extends StatefulWidget {
   _CadastroPetPerdido createState() => _CadastroPetPerdido();
 }
 
-
-List<DropdownMenuItem<int>> listDrop = [];
-
-  void loadData(){
-    listDrop = [];
-    listDrop.add(new DropdownMenuItem(
-      child: new Text('Item 1'),
-      value: 1,
-    ));
-    listDrop.add(new DropdownMenuItem(
-      child: new Text('Item 2'),
-      value: 2,
-    ));
-    listDrop.add(new DropdownMenuItem(
-      child: new Text('Item 3'),
-      value: 3,
-    ));
-  }
-
 class _CadastroPetPerdido extends State<CadastroPetPerdido> {
 
+  TextEditingController nomePet = new TextEditingController();
+  TextEditingController tipo = new TextEditingController();
+  TextEditingController raca = new TextEditingController();
+
+
+  Pet novo;
+
+  _CadastroPetPerdido(){
+    novo = Pet();
+  }
 
   String opcao = null;
     @override
@@ -37,7 +29,6 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
 
   @override
   Widget build(BuildContext context) {
-    loadData();
     return Scaffold(
         appBar: AppBar(
           title: Text('Cadastro Pet'),
@@ -55,16 +46,9 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
                     style: new TextStyle(color: Colors.black, fontSize: 14),
                     decoration: InputDecoration(
                       labelText: "Nome",
-                      labelStyle: TextStyle(color: Colors.black)  
-                    ),                
-                  ),
-                  TextField(
-                    autofocus: true,
-                    style: new TextStyle(color: Colors.black, fontSize: 14),
-                    decoration: InputDecoration(
-                      labelText: "Tipo",
-                      labelStyle: TextStyle(color: Colors.black)  
-                    ),  
+                      labelStyle: TextStyle(color: Colors.black)
+                    ),
+                    controller: nomePet ,
                   ),
                   TextField(
                     autofocus: true,
@@ -72,7 +56,8 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
                     decoration: InputDecoration(
                       labelText: "Raça",
                       labelStyle: TextStyle(color: Colors.black)  
-                    ),  
+                    ),
+                    controller: raca,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 12.0),
@@ -127,7 +112,7 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
                     ),
                     ),
                     onPressed: (){
-               
+
                     },
                   ),
                 ),
