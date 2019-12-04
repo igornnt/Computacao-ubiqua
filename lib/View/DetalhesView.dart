@@ -100,7 +100,7 @@ class _TelaDetailsState extends State<TelaDetails> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+            padding: const EdgeInsets.all(15),
             child: FloatingActionButton.extended(
               onPressed: () {},
               label: Text('QUERO ADOTAR!'),
