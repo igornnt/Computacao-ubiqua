@@ -3,6 +3,9 @@ import 'package:dogpampas/service/pet_repository.dart';
 import 'package:dogpampas/view/PetsRegiaoView.dart';
 import 'package:flutter/material.dart';
 
+import '../service/notificacoesController.dart';
+
+
 class CadastroPetPerdido extends StatefulWidget {
   @override
   _CadastroPetPerdido createState() => _CadastroPetPerdido();
@@ -15,6 +18,8 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
   TextEditingController sexo = new TextEditingController();
   TextEditingController bairro = new TextEditingController();
   TextEditingController rua = new TextEditingController();
+
+  NotificacaoController notificacoes = new NotificacaoController();
 
   Pet novo;
 
@@ -33,8 +38,7 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(20),
-          child: Center(
-            child: Column(
+          child: Center(            child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
