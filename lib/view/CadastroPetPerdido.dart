@@ -1,4 +1,6 @@
 import 'package:dogpampas/Model/Pet.dart';
+import 'package:dogpampas/service/pet_repository.dart';
+import 'package:dogpampas/view/PetsRegiaoView.dart';
 import 'package:flutter/material.dart';
 
 class CadastroPetPerdido extends StatefulWidget {
@@ -11,15 +13,13 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
   TextEditingController nomePet = new TextEditingController();
   TextEditingController tipo = new TextEditingController();
   TextEditingController raca = new TextEditingController();
+  TextEditingController sexo = new TextEditingController();
+  TextEditingController bairro = new TextEditingController();
+  TextEditingController rua = new TextEditingController();
 
-
-  Pet novo;
-
-  _CadastroPetPerdido(){
-    novo = Pet();
-  }
 
   String opcao = null;
+
     @override
   void initState() {
     // TODO: implement initState
@@ -71,6 +71,7 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
                       onChanged: (String escolhida){
                           setState(() {
                             opcao = escolhida;
+                            tipo.text = opcao.toString();
                           });
                       },
                       items: <String> ['Macho','Fêmea'].map<DropdownMenuItem<String>>((String value){
@@ -87,7 +88,8 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
                     decoration: InputDecoration(
                       labelText: "Bairro",
                       labelStyle: TextStyle(color: Colors.black)  
-                    ),  
+                    ),
+                    controller: bairro,
                   ),
                   TextField(
                     autofocus: true,
@@ -95,7 +97,8 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
                     decoration: InputDecoration(
                       labelText: "Rua que foi visto pela última vez",
                       labelStyle: TextStyle(color: Colors.black)  
-                    ),  
+                    ),
+                    controller: rua,
                   ),
                   Padding(
                 padding: const EdgeInsets.all(32),
@@ -112,7 +115,13 @@ class _CadastroPetPerdido extends State<CadastroPetPerdido> {
                     ),
                     ),
                     onPressed: (){
-
+                         Pet novoPet = Pet.init(nomePet.text, raca.text, tipo.text,bairro.text,rua.text, true);
+                         PetRepository.animais.add(novoPet);
+                         print(PetRepository.animais[0].descricao.toString());
+                         Navigator.push(context,
+                             MaterialPageRoute(
+                             builder: (context) => TelaPetsPerdidosRegiao()),
+                      );
                     },
                   ),
                 ),

@@ -1,8 +1,10 @@
 class Pet{
 
-  String _nome;
+  String _descricao;
   String _tipo;
   String _raca;
+  String bairro;
+  String rua;
   bool _perdido;
   String _latitude;
   String _longitude;
@@ -10,13 +12,16 @@ class Pet{
   // ######## Construtores ########
   Pet(){}
 
-  Pet.init(this._nome, this._raca, this._tipo, this._perdido, this._latitude, this._longitude){}
+  Pet.init(this._descricao, this._raca, this._tipo,this.bairro,this.rua, this._perdido, {latitude, longitude}){
+    this._latitude = latitude;
+    this._longitude = longitude;
+  }
 
 
   // ######## GETS E SETS ########
-  String get nome => _nome;
-  set nome(String value) {
-    _nome = value;
+  String get descricao => _descricao;
+  set descricao(String value) {
+    _descricao = value;
   }
 
   String get raca => _raca;
