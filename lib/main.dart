@@ -4,14 +4,41 @@ import 'package:dogpampas/View/LoginView.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
+FirebaseMessaging firebaseMessaging = new FirebaseMessaging();
 
+@override
+void initState(){
+  firebaseMessaging.configure(
+    onLaunch: (Map<String, dynamic> msg){
+      print("onLouch called");
+    },
+    onResume: (Map<String, dynamic> msg){
+      print(" on Resume called");
+    },
+    onMessage: (Map<String, dynamic> msg){
+      print(" onMessage called");
+    }
+  );
+
+  firebaseMessaging.requesNotificationPermissions(
+    const IosNotificationSettings(
+      sound: true,
+      alert: true,
+      badge: true,
+    )
+  ),
+ firebaseMessaging.
+}
 
 
 void main(){
   print('passou aqui');   
 
   _MyHomePageState().initState();
+
+  
 
   runApp(
       MaterialApp(
